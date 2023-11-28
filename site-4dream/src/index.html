@@ -3,15 +3,27 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/logo4d.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="/logo4d.svg" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4Dream Games</title>
 </head>
 
-<body class="">
+<body class="w-screen h-screen m-0 p-0 box-border overflow-x-hidden">
+  <header class="w-screen h-16 top-0 fixed bg-cinza-claro-light">
+    <nav class="w-screen h-full p-4 flex items-center justify-between">
+      <a class="no-underline cursor-pointer">
+        <h1 class="text-zinc-950 font-title text-2xl">4Dream Games</h1>
+      </a>
+      <span class="text-zinc-950 text-3xl cursor-pointer flex items-center">
+        <ion-icon name="menu" onclick="toggleMenu(this)"></ion-icon>
+      </span>
+    </nav>
+  </header>
 
-
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script type="module" src="/main.js"></script>
+  <script src="/script.js"></script>
 </body>
 
 </html>
