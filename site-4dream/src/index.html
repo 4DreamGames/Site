@@ -1,25 +1,374 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" class="!scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="shortcut icon" href="/logo4d.svg" type="image/x-icon" />
+  <link rel="shortcut icon" id="image-logo" href="/logo4d.svg" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
   <title>4Dream Games</title>
 </head>
 
-<body class="w-screen h-screen m-0 p-0 box-border overflow-x-hidden">
-  <header class="w-screen h-16 top-0 fixed bg-cinza-claro-light">
-    <nav class="w-screen h-full p-4 flex items-center justify-between">
-      <a class="no-underline cursor-pointer">
-        <h1 class="text-zinc-950 font-title text-2xl">4Dream Games</h1>
+<body
+  class="m-0 box-border overflow-x-hidden p-0 text-zinc-950 transition-all duration-300 dark:bg-black dark:text-white bg-white font-paragraph ">
+  <header class="fixed top-0 h-16 w-screen bg-white dark:bg-black z-50">
+    <nav class="flex h-16 w-full items-center justify-between p-4 md:justify-between md:items-center">
+      <a href="#home"
+        class="cursor-pointer no-underline hover:underline decoration-Azul-claro dark:decoration-Vermelho underline-offset-4 decoration-4">
+        <h1 class="font-extrabold leading-none text-2xl md:text-3xl tracking-tight dark:text-Vermelho">4Dream Games
+        </h1>
       </a>
-      <span class="text-zinc-950 text-3xl cursor-pointer flex items-center">
-        <ion-icon name="menu" onclick="toggleMenu(this)"></ion-icon>
-      </span>
+      <div class="flex justify-center">
+        <!-- menu mobile -->
+        <ul
+          class="open-menu w-full absolute hidden flex flex-col justify-center items-center h-screen p-4 bg-white dark:bg-black left-0 top-0 ease-in-out gap-y-6 md:hidden transition-opacity duration-300 opacity-100">
+          <li class="nav-links pb-6 text-center">
+            <a href="#home"
+              class="p-2 text-lg rounded underline underline-offset-4 decoration-Azul-claro decoration-4 dark:decoration-Vermelho dark:text-Vermelho">Home</a>
+          </li>
+          <li class="nav-links pb-6 text-center">
+            <a href="#empresa"
+              class="p-2 text-lg rounded underline underline-offset-4 decoration-Azul-claro decoration-4 dark:decoration-Vermelho dark:text-Vermelho">Empresa</a>
+          </li>
+          <li class="nav-links pb-6 text-center">
+            <a href="#devs"
+              class="p-2 text-lg rounded underline underline-offset-4 decoration-Azul-claro decoration-4 dark:decoration-Vermelho dark:text-Vermelho">Devs</a>
+          </li>
+          <li class="nav-links pb-6 text-center">
+            <a href="#contato"
+              class="p-2 text-lg rounded underline underline-offset-4 decoration-Azul-claro decoration-4 dark:decoration-Vermelho dark:text-Vermelho">Contato</a>
+          </li>
+        </ul>
+
+        <div class="md:flex md:gap-5 ">
+          <ul class="md:flex md:items-center hidden">
+            <li class="nav-links text-center">
+              <a href="#home"
+                class="p-2 text-lg md:text-xl rounded hover:underline hover:decoration-Azul-claro hover:animate-pulse dark:hover:decoration-white hover:underline-offset-4 decoration-2 dark:text-Vermelho">Home</a>
+            </li>
+            <li class="nav-links text-center">
+              <a href="#empresa"
+                class="p-2 text-lg md:text-xl rounded  hover:underline hover:decoration-Azul-claro hover:animate-pulse dark:hover:decoration-white hover:underline-offset-4 decoration-2 dark:text-Vermelho">Empresa</a>
+            </li>
+            <li class="nav-links text-center">
+              <a href="#devs"
+                class="p-2 text-lg md:text-xl rounded  hover:underline hover:decoration-Azul-claro hover:animate-pulse dark:hover:decoration-white hover:underline-offset-4 decoration-2 dark:text-Vermelho">Devs</a>
+            </li>
+            <li class="nav-links text-center">
+              <a href="#contato"
+                class="p-2 text-lg md:text-xl rounded  hover:underline hover:decoration-Azul-claro hover:animate-pulse dark:hover:decoration-white hover:underline-offset-4 decoration-2 dark:text-Vermelho">Contato</a>
+            </li>
+          </ul>
+          <span class="flex items-center justify-between md:justify-center gap-2">
+            <ion-icon name="moon"
+              class="toggle-dark cursor-pointer text-2xl dark:text-Vermelho text-Azul-escuro p-2 "></ion-icon>
+            <ion-icon name="menu"
+              class="toggle-menu cursor-pointer text-3xl dark:text-Vermelho text-Azul-escuro p-2  md:hidden "></ion-icon>
+          </span>
+        </div>
+      </div>
+
+
+
+
     </nav>
   </header>
+  <section id="home" class="w-full h-auto pt-[64px] p-4 flex items-center justify-center flex-col">
+    <div class="flex flex-col w-full">
+      <h1
+        class="my-4 text-4xl font-extrabold leading-none tracking-tight md:text-center md:text-5xl lg:text-6xl lg:text-center ">
+        Bem-Vindo à
+        <span class="underline underline-offset-3 decoration-8 decoration-Azul-claro dark:decoration-Vermelho">
+          4Dream Games!
+        </span>
+      </h1>
+      <p class="text-lg md:text-2xl md:text-center text-gray-700 lg:text-2xl lg:text-center dark:text-gray-400">
+        Somos os arquitetos de um jogo imerso na
+        escuridão, em um mundo pós apocalíptico.
+      </p>
+    </div>
 
+    <div class="w-full h-full flex flex-col items-center gap-3 mt-12 justify-centera lg:flex-row-reverse lg:p-4">
+      <img id="img-videogame-light" src="/img-videogame-light.svg" class="block dark:hidden md:w-3/4 lg:w-1/2">
+      <img id="img-videogame-dark" src="/img-videogame-dark.svg" class="hidden dark:block md:w-3/4 lg:w-1/2">
+      <p class="tracking-wide text-lg md:text-2xl md:text-center lg:text-4xl text-gray-700 dark:text-[#E6E6E6]">
+        Forjamos experiências
+        desafiadoras que testam suas habilidades de sobrevivência!
+      </p>
+    </div>
+  </section>
+
+  <section id="empresa" class="w-full h-auto p-4 flex flex-col items-center pt-[64px] ">
+    <div class="flex flex-col items-center justify-center gap-8 my-6">
+      <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl text-center">
+        Nosso objetivo é criar experiências profundas
+      </h1>
+      <img id="img-development-light" src="/img-development-light.svg" alt="" class="block dark:hidden  w-auto h-auto">
+      <img id="img-development-dark" src="/img-development-light.svg" alt="" class="hidden dark:block w-auto h-auto">
+
+
+      <div class="w-full flex items-center justify-center">
+        <figure class="max-w-screen-md mx-auto text-center mt-5">
+          <blockquote>
+            <p class="text-2xl italic font-medium lg:text-3xl">
+              "Na 4Dream Games, nosso objetivo é criar experiências profundas com nossos projetos. Ao criar nossa obra
+              <span class="underline decoration-4 decoration-Azul-claro dark:decoration-Vermelho">
+                Pesadelo Oculto
+              </span>, nossa equipe se empenhou em oferecer uma experiência além da diversão."
+            </p>
+          </blockquote>
+          <figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+            <div
+              class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700 sm:text-lg lg:text-xl">
+              <cite class="pe-3 ">Carlos Eduardo</cite>
+              <cite class="ps-3  text-gray-500 dark:text-gray-400">CEO da 4Dream</cite>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="devs" class="w-full h-auto p-4 flex flex-col items-center pt-[64px]">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6 ">
+      <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
+        <h2 class="mb-4 text-4xl md:text-6xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          Nossos Devs
+        </h2>
+        <p class="tracking-wide md:text-2xl text-lg text-gray-700 dark:text-gray-400">
+          Conheça a equipe que fez tudo acontecer
+        </p>
+      </div>
+      <div class="grid gap-5 lg:gap-16 sm:grid-cols-2 md:grid-cols-3">
+        <div
+          class="tracking-wide  text-lg text-gray-700 dark:text-gray-400 text-center rounded-md shadow-md dark:shadow-gray-700 p-4 z-10">
+          <div class="w-full h-[308px] flex flex-col items-center">
+            <img id="img-carlos" class="mx-auto mb-4 w-36 h-36" src="/carlos.svg" alt="Bonnie Avatar">
+            <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Carlos Eduardo
+            </h3>
+            <p>Líder e Dev Mobile</p>
+          </div>
+          <ul class="flex justify-center space-x-4 text-Azul-alternativo dark:text-Vermelho">
+            <li>
+              <a class="" href=""><ion-icon name="logo-github" size="large"></ion-icon></a>
+            </li>
+            <li>
+              <a class="" href="#home"><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div
+          class="tracking-wide text-lg text-gray-700 dark:text-gray-400 text-center rounded-md shadow-md dark:shadow-gray-700 p-4">
+          <div class="w-full h-[308px] flex flex-col items-center">
+            <img id="img-leo" class="mx-auto mb-4 w-36 h-36"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Bonnie Avatar">
+            <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Léo Kenzo
+            </h3>
+            <p>Vice-Lider e Dev Backend/Mobile</p>
+          </div>
+          <ul class="flex justify-center space-x-4 text-Azul-alternativo dark:text-Vermelho">
+            <li>
+              <a class="" href=""><ion-icon name="logo-github" size="large"></ion-icon></a>
+            </li>
+            <li>
+              <a class="" href=""><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div
+          class="tracking-wide  text-lg text-gray-700 dark:text-gray-400 text-center rounded-md shadow-md dark:shadow-gray-700 p-4">
+          <div class="w-full h-[308px] flex flex-col items-center">
+            <img id="img-bruno" class="mx-auto mb-4 w-36 h-36"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Bonnie Avatar">
+            <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Bruno Lima
+            </h3>
+            <p>Artista e Modelador</p>
+          </div>
+
+          <ul class="flex justify-center space-x-4 text-Azul-alternativo dark:text-Vermelho">
+            <li>
+              <a class="" href=""><ion-icon name="logo-github" size="large"></ion-icon></a>
+            </li>
+            <li>
+              <a class="" href=""><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div
+          class="tracking-wide  text-lg text-gray-700 dark:text-gray-400 text-center rounded-md shadow-md dark:shadow-gray-700 p-4">
+          <div class="w-full h-[308px] flex flex-col items-center">
+            <img id="img-davi" class="mx-auto mb-4 w-36 h-36"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Bonnie Avatar">
+            <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Davi Gonzaga
+            </h3>
+            <p>Dev Unity e Dev Frontend</p>
+          </div>
+
+          <ul class="flex justify-center space-x-4 text-Azul-alternativo dark:text-Vermelho">
+            <li>
+              <a class="" href=""><ion-icon name="logo-github" size="large"></ion-icon></a>
+            </li>
+            <li>
+              <a class="" href=""><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div
+          class="tracking-wide  text-lg text-gray-700 dark:text-gray-400 text-center rounded-md shadow-md dark:shadow-gray-700 p-4">
+          <div class="w-full h-[308px] flex flex-col items-center">
+            <img id="img-jhonata" class="mx-auto mb-4 w-36 h-36"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Bonnie Avatar">
+            <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Jhonata Brito
+            </h3>
+            <p>Dev Unity e Analista</p>
+          </div>
+
+          <ul class="flex justify-center space-x-4 text-Azul-alternativo dark:text-Vermelho">
+            <li>
+              <a class="" href=""><ion-icon name="logo-github" size="large"></ion-icon></a>
+            </li>
+            <li>
+              <a class="" href=""><ion-icon class="cursor-pointer" name="logo-linkedin" size="large"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="tracking-wide  text-lg text-gray-700 dark:text-gray-400 text-center rounded-md shadow-md dark:shadow-gray-700 p-4">
+          <div class="w-full h-[308px] flex flex-col items-center">
+            <img id="img-pedro" class="mx-auto mb-4 w-36 h-36 bg-center bg-cover"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Bonnie Avatar">
+            <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Pedro Ribeiro
+            </h3>
+            <p>Dev Unity e Analista</p>
+          </div>
+
+          <ul class="flex justify-center space-x-4 text-Azul-alternativo dark:text-Vermelho">
+            <li>
+              <a class="pointer" href=""><ion-icon name="logo-github" size="large"></ion-icon></a>
+            </li>
+            <li>
+              <a class="pointer" href=""><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer id="contato" class="w-full h-auto flex flex-col items-center">
+    <div class="mx-auto max-w-screen-xl px-4 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+      <div class="text-center">
+        <h2 class="mb-4 text-4xl md:text-6xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          Entre em contato conosco!
+        </h2>
+
+        <p class="tracking-wide md:text-2xl text-lg text-gray-700 dark:text-gray-400">
+          Acesse nossas redes sociais e nos deixe uma mensagem!
+        </p>
+      </div>
+
+      <!-- formulario de enviar msg -->
+      <form action="" id="formMsg" class="w-full mt-8 justify-center">
+        <div class="grid gap-6 mb-6">
+          <div>
+            <label for="first_name" class="block my-2 tracking-wide  text-lg text-gray-700 dark:text-white md:text-2xl">
+              Seu nome
+            </label>
+
+            <input type="text" id="first_name"
+              class="bg-gray-50 border-Azul-claro border-2 text-lg md:text-xl  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-zinc-900 dark:border-Vermelho dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Digite seu nome" />
+
+            <label for="message" class="block my-2 tracking-wide  text-lg text-gray-700 dark:text-white md:text-2xl">
+              Sua Mensagem
+            </label>
+
+            <textarea id="message" rows="4"
+              class="bg-gray-50 border-Azul-claro border-2 text-lg md:text-xl rounded-lg focus:ring-blue-500 block w-full p-2.5 dark:bg-zinc-900 dark:border-Vermelho dark:placeholder-gray-400  dark:focus:border-Vermelho"
+              placeholder="Digite sua mensagem aqui..."></textarea>
+
+
+
+            <button id="btnSubmit" data-modal-target="popup-modal" data-modal-show="popup-modal"
+              class=" bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-lg w-full sm:w-auto px-5 py-2.5 text-center md:w-1/3 dark:bg-Vermelho dark:hover:bg-red-600 dark:focus:ring-Vermelho text-white mt-5"
+              type="submit">
+              Enviar
+            </button>
+
+            <!-- modal ao enviar o formulario -->
+            <div id="popup-modal" tabindex="-1"
+              class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full ">
+              <div class="relative p-4 w-full max-w-md max-h-full">
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                  <button type="button"
+                    class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                    data-modal-hide="popup-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 14 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                  </button>
+                  <div class="p-4 md:p-5 text-center">
+                    <svg class="mx-auto mb-4 text-green-500 w-12 h-12" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <h3 class="mb-5 text-lg  text-gray-500 dark:text-white">
+                      Muito obrigado! Sua mensagem foi enviada.
+                    </h3>
+                    <button data-modal-hide="popup-modal" type="button"
+                      class="text-white bg-Vermelho hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800  rounded-lg inline-flex items-center px-5 py-2.5 text-center me-2">
+                      Fechar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="pt-8 w-full flex items-center justify-center gap-8 text-Azul-alternativo dark:text-Vermelho ">
+        <a class="focus:animate-ping hover:animate-pulse" href=""><ion-icon name="logo-github"
+            size="large"></ion-icon></a>
+        <a class="focus:animate-ping hover:animate-pulse" href=""><ion-icon name="logo-linkedin"
+            size="large"></ion-icon></a>
+        <a class="focus:animate-ping hover:animate-pulse" href=""><ion-icon name="logo-instagram"
+            size="large"></ion-icon></a>
+        <a class="focus:animate-ping hover:animate-pulse" href=""><ion-icon name="logo-twitter"
+            size="large"></ion-icon></a>
+      </div>
+
+      <div class="w-full border border-Azul-claro my-2 dark:border-Vermelho"></div>
+
+      <span class="block md:text-lg text-center text-gray-500 dark:text-gray-400">© 2023 <a href="#"
+          class="hover:underline">4DreamGames™</a>. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script type="module" src="/main.js"></script>
