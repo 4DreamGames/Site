@@ -24,7 +24,6 @@ btnMenuToggle.addEventListener("click", () => {
     btnToggleDark.classList.remove("hidden");
     setTimeout(() => {
       openMenu.classList.add("hidden");
-
     }, 300);
   }
 });
@@ -43,6 +42,6 @@ navLinks.forEach((link) => {
 
 function submitForm(event) {
   event.preventDefault();
-  formMsg.reset()
+  formMsg.reset();
 }
 formMsg.addEventListener("submit", submitForm);
